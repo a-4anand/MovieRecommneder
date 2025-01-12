@@ -1,0 +1,142 @@
+body {
+    font-family: Arial, sans-serif;
+     background: linear-gradient(to right,#65E5DD, #a3bfd7, #eee1e1); /* Adjusting gradient colors for a more vibrant look */
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 50px;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    /*background:linear-gradient(to right, #ffafbd, #ffc3a0);*/
+    margin-top: -30px;
+
+    border-radius: 10px;
+    margin-bottom: 30px;
+    margin-right: -80px;
+
+}
+
+.logo {
+    display: flex;
+     margin-top: -10px;
+    align-items: center;
+    margin-left:-150px;
+}
+
+.logo img {
+    width: 120px;
+    margin-right: 10px;
+}
+
+.auth-buttons button {
+    background-color: rgba(255, 255, 255, 0.33); /* Adjust button color */
+    border: none;
+    padding: 20px 40px;
+    margin: 0 5px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 16px;
+    color: #090000;
+}
+
+main .content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 50px;
+}
+
+.welcome {
+    flex: 1;
+    text-align: left;
+}
+
+main h2 {
+    font-size: 48px;
+    color: #333;
+    margin: 0;
+}
+
+main h2 span {
+    color: #ff6f61; /* Adjust span color */
+    font-weight: bold;
+}
+
+.buttons {
+    margin-top: 20px;
+}
+
+.buttons button {
+    background-color: #ff6f61; /* Adjust button color */
+    border: none;
+    padding: 15px 30px;
+    margin: 10px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 18px;
+    color: white;
+}
+
+.book-stack {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.book-stack img {
+    width: 80%; /* Adjust book stack size */
+    max-width: 400px;
+}
+
+.dropdown-button {
+    background-color: #ff6f61; /* Adjust button color */
+    border: none;
+    padding: 10px 20px;
+    margin: 10px 0;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 18px;
+    color: white;
+    display: block;
+    width: 100%;
+    text-align: center;
+}
+
+.dropdown-section {
+    display: none;
+    background: #ffffff;
+    padding: 20px;
+    margin-top: 20px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    border-radius: 10px;
+}
+
+.dropdown-section.active {
+    display: block;
+}
+
+.dropdown-section img {
+    width: 100%;
+    height: auto;
+    margin-top: 20px;
+}
+
+footer {
+    background: #ffffff;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    border-radius: 10px;
+    margin-top: 30px;
+}
+
+
+

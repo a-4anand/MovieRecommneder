@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Blogs</title>
+    <link rel="stylesheet" href="{% static 'css/blogs.css' %}">
+    </head>
+    
+</head>
+<body>
+    <div class="navbar">
+        <button onclick="window.location.href='{% url 'dashboard' %}'">Dashboard</button>
+        <button onclick="window.location.href='{% url 'promote_books' %}'">Promote Books</button>
+        <button onclick="window.location.href='{% url 'exchange_books' %}'">Exchange Books</button>
+        <button class="active">Blogs</button>
+        <button onclick="window.location.href='{% url 'read_and_earn' %}'">Read and Earn</button>
+    </div>
+    <div class="blogs-container">
+        <h1>Our Blogs</h1>
+        <div class="blog-post">
+            <img src="{% static 'images/image1.jpg' %}" alt="Coding in IT Sector">
+            <h2>Post 1 Headline</h2>
+            <p>Scope of Coding in IT Sector</p>
+            <p>Wed Jul 22, 2025</p>
+            <button>Read More</button>
+        </div>
+        <div class="blog-post">
+            <img src="{% static 'images/image2.jpg' %}" alt="Change Personality">
+            <h2>Post 2 Headline</h2>
+            <p>How to Change Personality</p>
+            <p>Wed Jul 22, 2025</p>
+            <button>Read More</button>
+        </div>
+        <div class="blog-post">
+            <img src="{% static 'images/image3.jpg' %}" alt="Write and Publish a Book">
+            <h2>Post 3 Headline</h2>
+            <p>How to Write and Publish a Book</p>
+            <p>Wed Jul 22, 2025</p>
+            <button>Read More</button>
+        </div>
+        <button class="see-all">See All</button>
+    </div>
+</body>
+</html>

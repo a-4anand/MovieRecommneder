@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exchange Books</title>
+    <link rel="stylesheet" href="{% static 'css/exchange_books.css' %}">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><button onclick="window.location.href='{% url 'dashboard' %}'">Dashboard</button></li>
+                <li><button onclick="window.location.href='{% url 'promote_books' %}'">Promote Books</button></li>
+                <button class="active">Exchange Books</button>
+                <li><button onclick="window.location.href='{% url 'blogs' %}'">Blogs</button></li>
+                <li><button onclick="window.location.href='{% url 'read_and_earn' %}'">Read and Earn</button></li>
+            </ul>
+        </nav>
+    </header>   
+    <main>
+        <h1>Exchange Books</h1>
+        <div class="book-list">
+            <div class="book-item">
+                <img src="{% static 'images/passionate_whispers.jpg' %}" alt="Passionate Whispers">
+                <p>Book: Passionate Whispers</p>
+                <p>Posted By: Vanshika Bakshi</p>
+            </div>
+            <div class="book-item">
+                <img src="{% static 'images/zindagi_ek_railgaadi.jpg' %}" alt="Zindagi ek Railgaadi">
+                <p>Book: Zindagi ek Railgaadi</p>
+                <p>Posted By: Deepak Sharma</p>
+            </div>
+            <div class="book-item">
+                <img src="{% static 'images/meri_kahani.jpg' %}" alt="Meri Kahani">
+                <p>Book: Meri Kahani</p>
+                <p>Posted By: Preeti Panda</p>
+            </div>
+            <div class="book-item">
+                <img src="{% static 'images/the_journey_of_love.jpg' %}" alt="The Journey of Love">
+                <p>Book: The Journey of Love</p>
+                <p>Posted By: Danish</p>
+            </div>
+        </div>
+        <button class="see-all">See All</button>
+    </main>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Book Reviews</title>
+    <link rel="stylesheet" href="{% static 'css/dashboard.css' %}">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <button class="active">Dashboard</button>
+                <li><button onclick="window.location.href='{% url 'promote_books' %}'">Promote Books</button></li>
+                <li><button onclick="window.location.href='{% url 'exchange_books' %}'">Exchange Books</button></li>
+                <li><button onclick="window.location.href='{% url 'blogs' %}'">Blogs</button></li>
+                <li><button onclick="window.location.href='{% url 'read_and_earn' %}'">Read and Earn</button></li>
+            </ul>
+        </nav>
+    </header>    
+    <main>
+        <h1>Read the Book Reviews</h1>
+        <div class="book-container">
+            <div class="book">
+                <img src="{% static 'images/his_last_flight.jpg' %}" alt="His Last Flight">
+                <p>Book: His Last Flight</p>
+                <p>Author: Miss Vashishth</p>
+            </div>
+            <div class="book">
+                <img src="{% static 'images/folk_tales_from_japan.jpg' %}" alt="Folk Tales from Japan">
+                <p>Book: Folk Tales from Japan</p>
+                <p>Author: Priyanka Bhandarkar</p>
+            </div>
+            <div class="book">
+                <img src="{% static 'images/for_you.jpg' %}" alt="For You">
+                <p>Book: For You</p>
+                <p>Author: Preeti Panda</p>
+            </div>
+            <div class="book">
+                <img src="{% static 'images/monstrous_desires.jpg' %}" alt="Monstrous Desires">
+                <p>Book: Monstrous Desires</p>
+                <p>Author: Miss Vashishth</p>
+            </div>
+        </div>
+        <button>See All</button>
+    </main>
+</body>
+</html>

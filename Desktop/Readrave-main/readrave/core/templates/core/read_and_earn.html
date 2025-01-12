@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Read and Earn</title>
+    <link rel="stylesheet" href="{% static 'css/read_and_earn.css' %}">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><button  onclick="window.location.href='{% url 'dashboard' %}'">Dashboard</button></li>
+                <li><button onclick="window.location.href='{% url 'promote_books' %}'">Promote Books</button></li>
+                <li><button onclick="window.location.href='{% url 'exchange_books' %}'">Exchange Books</button></li>
+                <li><button onclick="window.location.href='{% url 'blogs' %}'">Blogs</button></li>
+                <button class="active">Read and Earn</button>
+            </ul>
+        </nav>
+    </header>   
+    <div class="content">
+        <h1>Read and Earn</h1>
+        <div class="book">
+            <img src="{% static 'images/behind_the_hearts.jpg' %}" alt="Behind the Hearts">
+            <div class="book-details">
+                <h3>Book: Behind the Hearts</h3>
+                <p class="earn">Earn: Rs300</p>
+                <p class="date">Last Date: 25th July 2025</p>
+            </div>
+            <div class="buttons">
+                <button>Add to Cart</button>
+                <button>Earn Now</button>
+            </div>
+        </div>
+        <div class="book">
+            <img src="{% static 'images/love_you_superstar.jpg' %}" alt="Love You Superstar">
+            <div class="book-details">
+                <h3>Book: Love You Superstar</h3>
+                <p class="earn">Earn: Rs350</p>
+                <p class="date">Last Date: 25th July 2025</p>
+            </div>
+            <div class="buttons">
+                <button>Add to Cart</button>
+                <button>Earn Now</button>
+            </div>
+        </div>
+        <div class="book">
+            <img src="{% static 'images/hidden_talent.jpg' %}" alt="Hidden Talent">
+            <div class="book-details">
+                <h3>Book: Hidden Talent</h3>
+                <p class="earn">Earn: Rs150</p>
+                <p class="date">Last Date: 25th July 2025</p>
+            </div>
+            <div class="buttons">
+                <button>Add to Cart</button>
+                <button>Earn Now</button>
+            </div>
+        </div>
+        <div class="see-all">
+            <button>See All</button>
+        </div>
+    </div>
+</body>
+</html>

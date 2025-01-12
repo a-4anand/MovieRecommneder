@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ReadRave</title>
+    <link rel="stylesheet" href="{% static 'css/home.css' %}">
+    <style>
+        .dropdown-section {
+            display: none;
+        }
+        .dropdown-section.active {
+            display: block;
+        }
+        .dropdown-button {
+            cursor: pointer;
+            margin-top: 20px;
+        }
+    </style>
+    <script>
+        function toggleDropdown(sectionId) {
+            var section = document.getElementById(sectionId);
+            section.classList.toggle('active');
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">
+                <img src="{% static 'images/logo.png' %}" alt="ReadRave Logo">
+                <h1>ReadRave</h1>
+            </div>
+            <div class="auth-buttons">
+                <button onclick="window.location.href='{% url 'login' %}'">Login</button>
+                <button onclick="window.location.href='{% url 'signup' %}'">Sign Up</button>
+            </div>
+        </header>
+        <main>
+            <div class="content">
+                <div class="welcome">
+                    <h2>Welcome to <span>ReadRave</span></h2>
+                    <div class="buttons">
+                        <button onclick="window.location.href='{% url 'exchange_books' %}'">Exchange Books</button>
+                        <button onclick="window.location.href='{% url 'promote_books' %}'">Promote Books</button>
+                    </div>
+                </div>
+                <div class="book-stack">
+                    <img src="{% static 'images/book_stack.png' %}" alt="Book Stack" class="right-aligned-image">
+                </div>
+            </div>
+            
+            <div class="dropdown-section" id="why-readrave">
+                <h2>Why ReadRave</h2>
+                <p>Discover the benefits of using ReadRave for exchanging and promoting books.</p>
+                <img src="{% static 'images/benefits.png' %}" alt="Benefits">
+            </div>
+            <button class="dropdown-button" onclick="toggleDropdown('why-readrave')">Why ReadRave</button>
+
+            <div class="dropdown-section" id="about-team">
+                <h2>About Team</h2>
+                <p>Meet the dedicated team behind ReadRave.</p>
+                <img src="{% static 'images/team.png' %}" alt="Team">
+            </div>
+            <button class="dropdown-button" onclick="toggleDropdown('about-team')">About Team</button>
+
+            <div class="dropdown-section" id="clients-testimonials">
+                <h2>Clients Testimonials</h2>
+                <p>Read what our satisfied clients have to say about us.</p>
+                <img src="{% static 'images/testimonials.png' %}" alt="Testimonials">
+            </div>
+            <button class="dropdown-button" onclick="toggleDropdown('clients-testimonials')">Clients Testimonials</button>
+        </main>
+        <footer>
+            <p>&copy; 2025 ReadRave. All Rights Reserved.</p>
+        </footer>
+    </div>
+</body>
+</html>
+
+
+
+

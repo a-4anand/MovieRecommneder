@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promote Books</title>
+    <link rel="stylesheet" href="{% static 'css/promote_books.css' %}">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><button onclick="window.location.href='{% url 'dashboard' %}'">Dashboard</button></li>
+                <button class="active">Promote Books</button>
+                <li><button onclick="window.location.href='{% url 'exchange_books' %}'">Exchange Books</button></li>
+                <li><button onclick="window.location.href='{% url 'blogs' %}'">Blogs</button></li>
+                <li><button onclick="window.location.href='{% url 'read_and_earn' %}'">Read and Earn</button></li>
+            </ul>
+        </nav>
+    </header>   
+    <main>
+        <h1>Buy Book Promotion Package</h1>
+        <div class="packages">
+            <div class="package">
+                <img src="{% static 'images/diamond.jpg' %}" alt="Diamond Package">
+                <h2>DIAMOND PACKAGE</h2>
+                <p>Rs. 1500</p>
+            </div>
+            <div class="package">
+                <img src="{% static 'images/platinum.jpg' %}" alt="Platinum Package">
+                <h2>PLATINUM PACKAGE</h2>
+                <p>Rs. 1000</p>
+            </div>
+            <div class="package">
+                <img src="{% static 'images/gold.jpg' %}" alt="Gold Package">
+                <h2>GOLD PACKAGE</h2>
+                <p>Rs. 500</p>
+            </div>
+        </div>
+        <div class="note">
+            <p>Note: Book cost isn’t included in these Packages</p>
+        </div>
+    </main>
+</body>
+</html>
